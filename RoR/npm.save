@@ -1,0 +1,9 @@
+paczki npm instaluje sie tak:
+	
+	npm i [options] [package] #zamiast i mozna pisac 'install' 
+		-- save #dodawane sa do calego projektu
+		-- save-dev #trafiaja do dependencies do developmentu
+		-- global / -g
+
+yo - paczka do instalacji yeoman-genertaor, pozwala na szybkie tworzenie projektow
+web-igniter - 

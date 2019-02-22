@@ -1,0 +1,8 @@
+= form_with model: @note, local: true do |form|
+    %p
+        = form.label :Name
+        = form.text_field :name
+    %p
+        = form.label :Content
+        = form.text_area :content
+    =form.submit

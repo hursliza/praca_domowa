@@ -1,0 +1,48 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.bubble1 {
+    @include drawBubble(150px, -5%, 5%);
+    @include animateBubble(20s, 3s);
+}
+
+.bubble2 {
+    @include drawBubble(50px, 15%, 5%);
+    @include animateBubble(15s, 5s);
+}
+
+.bubble3 {
+    @include drawBubble(80px, 35%, 5%);
+    @include animateBubble(25s, 2s);
+}
+
+.bubble4 {
+    @include drawBubble(30px, 45%, 5%);
+    @include animateBubble(15s, 3s);
+}
+
+.bubble5 {
+    @include drawBubble(80px, 60%, 5%);
+    @include animateBubble(20s, 4s);
+}
+
+.bubble6 {
+    @include drawBubble(120px, 75%, 5%);
+    @include animateBubble(18s, 2s);
+}
+
+.bubble7 {
+    @include drawBubble(60px, 85%, 5%);
+    @include animateBubble(25s, 5s);
+}
+
+.bubble8 {
+    @include drawBubble(40px, 95%, 5%);
+    @include animateBubble(15s, 3s);
+}

@@ -1,0 +1,77 @@
+@mixin drawBubble($size, $left, $top){
+    background-color: $bubbleblue;
+    height: $size;
+    width: $size;
+
+    -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.8);
+	-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 0.8);
+
+    position: absolute;
+    left: $left;
+    top: $top;
+}
+
+@mixin animateBubble($yDuration, $xDuration) {
+    @keyframes moveBubble {
+        0% {
+            margin-top: $startpoint;
+        }
+        100% {
+            margin-top: $endpoint;
+        }
+    }
+
+    @-moz-keyframes moveBubble {
+        0% {
+            margin-top: $startpoint;
+        }
+        100% {
+            margin-top: $endpoint;
+        }
+    }
+
+    @-webkit-keyframes moveBubble {
+        0% {
+            margin-top: $startpoint;
+        }
+        100% {
+            margin-top: $endpoint;
+        }
+    }
+
+    @keyframes moveSides {
+        0% {
+            margin-left: $sidestart;
+        }
+        100% {
+            margin-left: $sidesend;
+        } 
+    }
+
+    @-moz-keyframes moveSides {
+        0% {
+            margin-left: $sidestart;
+        }
+        100% {
+            margin-left: $sidesend;
+        } 
+    }
+
+    @-webkit-keyframes moveSides {
+        0% {
+            margin-left: $sidestart;
+        }
+        100% {
+            margin-left: $sidesend;
+        } 
+    }
+
+    animation: moveBubble $yDuration linear infinite, moveSides $xDuration ease-in-out infinite alternate;
+    -webkit-animation: moveBubble $yDuration linear infinite, moveSides $xDuration ease-in-out infinite alternate;
+    -moz-animation: moveBubble $yDuration linear infinite, moveSides $xDuration ease-in-out infinite alternate;
+}

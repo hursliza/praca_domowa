@@ -1,0 +1,6 @@
+npm i [options] [package]
+	--save-dev
+	--save
+	-g / --global
+
+npm init . #tworzy paczki w projekcie

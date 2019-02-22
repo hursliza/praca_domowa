@@ -1,0 +1,10 @@
+%p 
+    Name:
+    =@note.name 
+%p
+    Content:
+    =@note.content    
+%p
+    =link_to "Index", notes_path
+    =link_to "Edit note", edit_note_path(@note)
+    =link_to "Delete", note_path(@note), method: :delete
